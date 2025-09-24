@@ -33,15 +33,15 @@ export default function Contact() {
       </motion.p>
       <div className="flex justify-center gap-6">
         <Button asChild>
-          <a href="mailto:hnry.dev@example.com">Email Me</a>
+          <a href="mailto:henrykay53@gmail.com">Email Me</a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="https://linkedin.com/in/hnry" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/henry-kolawole-510ab41b4" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="https://github.com/hnry" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/henrykay53" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </Button>

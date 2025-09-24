@@ -18,10 +18,10 @@ export default function About() {
         className="flex justify-center"
       >
         <Image
-          src="/profile.jpg"
+          src="/image.jpg"
           alt="HNRY"
-          width={280}
-          height={280}
+          width={500}
+          height={380}
           className="rounded-2xl object-cover shadow-lg"
         />
       </motion.div>

@@ -10,7 +10,7 @@ const fadeUp = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="p-12 bg-muted/30">
+    <section id="projects" className="px-5 py-10 bg-muted/30">
       <motion.h2
         variants={fadeUp}
         initial="hidden"
@@ -21,7 +21,25 @@ export default function Projects() {
       >
         Selected Projects
       </motion.h2>
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 max-5xl-full mx-auto">
+        <ProjectCard
+          title="Smart Data Table"
+          description="A customizable and accessible React data table with sorting, filtering, and pagination."
+          codeUrl="https://github.com/hnry/smart-datatable"
+          demoUrl="https://smart-datatable-demo.vercel.app"
+        />
+        <ProjectCard
+          title="Smart Data Table"
+          description="A customizable and accessible React data table with sorting, filtering, and pagination."
+          codeUrl="https://github.com/hnry/smart-datatable"
+          demoUrl="https://smart-datatable-demo.vercel.app"
+        />
+        <ProjectCard
+          title="Smart Data Table"
+          description="A customizable and accessible React data table with sorting, filtering, and pagination."
+          codeUrl="https://github.com/hnry/smart-datatable"
+          demoUrl="https://smart-datatable-demo.vercel.app"
+        />
         <ProjectCard
           title="Smart Data Table"
           description="A customizable and accessible React data table with sorting, filtering, and pagination."

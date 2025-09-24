@@ -9,7 +9,7 @@ const fadeUp = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="p-12 max-w-4xl mx-auto">
+    <section id="skills" className="px-5 py-10 max-w-4xl mx-auto">
       <motion.h2
         variants={fadeUp}
         initial="hidden"

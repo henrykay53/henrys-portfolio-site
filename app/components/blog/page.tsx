@@ -28,8 +28,8 @@ export default function BlogPage() {
   });
 
   return (
-    <main id="blog" className="max-w-3xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
+    <main id="blog" className="max-w-full mx-auto px-5 py-10">
+      <h1 className="text-3xl text-center font-bold mb-8">Blog</h1>
       <div className="space-y-8">
         {posts.map((post) => (
           <div key={post.slug} className="border-b border-muted pb-4">
