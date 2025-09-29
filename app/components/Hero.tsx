@@ -33,7 +33,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="flex gap-4 justify-center"
+        className="flex gap-10 justify-center"
       >
         <Button asChild>
           <a href="#projects">View Projects</a>

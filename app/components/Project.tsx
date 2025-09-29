@@ -46,7 +46,6 @@ export default function Projects() {
           codeUrl="https://github.com/hnry/smart-datatable"
           demoUrl="https://smart-datatable-demo.vercel.app"
         />
-        {/* Add more ProjectCards here */}
       </div>
     </section>
   );

@@ -5,9 +5,6 @@ import Projects from "./components/Project";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
-
-
-
 export default function Home() {
   return (
     <>
@@ -17,9 +14,6 @@ export default function Home() {
       <BlogPage />
       <Skills />
       <Contact />
-      
-      
-      {/* Projects, Blog, Skills, Contact will follow */}
     </>
   );
 }
