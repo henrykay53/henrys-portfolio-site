@@ -1,19 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
@@ -48,7 +46,6 @@ export default function Projects() {
       image: "/suwkWeb.png",
     },
   ];
-  
 
   return (
     <section id="projects" className="px-6 py-20 bg-gradient-to-b from-background to-muted/30">

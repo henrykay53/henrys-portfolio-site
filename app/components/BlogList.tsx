@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -12,7 +12,7 @@ type Post = {
 };
 
 export default function BlogList({ posts }: { posts: Post[] }) {
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
@@ -50,7 +50,6 @@ export default function BlogList({ posts }: { posts: Post[] }) {
               </p>
             </div>
 
-            {/* ✅ Wrap Read more in a Link */}
             <Link
               href={`/blog/${post.slug}`}
               className="mt-5 flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity"

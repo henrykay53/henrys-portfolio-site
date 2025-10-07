@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Code, Sparkles, Wrench, Cpu, Layers, Rocket } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -27,10 +27,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="px-6 py-20 max-w-5xl mx-auto text-center "
-    >
+    <section id="skills" className="px-6 py-20 max-w-5xl mx-auto text-center">
       {/* Header */}
       <motion.h2
         variants={fadeUp}
@@ -41,8 +38,6 @@ export default function Skills() {
       >
         Skills & Tools
       </motion.h2>
-
-      
 
       {/* Skill Grid */}
       <motion.ul
