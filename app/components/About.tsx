@@ -36,13 +36,13 @@ export default function About() {
       >
         <h2 className="text-3xl font-bold">About Me</h2>
         <p className="text-muted-foreground leading-relaxed">
-          I’m HNRY, a frontend engineer specializing in React and TypeScript.
-          I focus on building performant, scalable, and accessible interfaces
-          with great attention to user experience and clean architecture.
+      I’m HNRY — a frontend engineer passionate about building interfaces that balance performance, scalability, and great user experience.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Currently, I’m open to remote opportunities worldwide, where I can
-          contribute to ambitious teams and build products that matter.
+    I work primarily with React, Next.js, TypeScript, and TailwindCSS, crafting clean, maintainable code and accessible designs. Beyond implementing features, I care deeply about structure, clarity, and how users feel when interacting with products.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          I’m currently open to opportunities where I can contribute to ambitious projects, grow alongside strong engineering teams, and build software that makes a meaningful impact.
         </p>
       </motion.div>
     </section>

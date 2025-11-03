@@ -19,7 +19,7 @@ import {
 const navItems = [
   { href: "#hero", icon: User },
   { href: "#projects", icon: FolderKanban },
-  { href: "#blog", icon: BookOpen },
+  // { href: "#blog", icon: BookOpen },
   { href: "#skills", icon: Code },
   { href: "#contact", icon: Mail },
 ];

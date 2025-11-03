@@ -3,11 +3,12 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 type ProjectCardProps = {
   title: string;
   description: string;
+  stack: string[];
   codeUrl: string;
   demoUrl?: string;
   image?: string;
@@ -21,6 +22,7 @@ const fadeUp: Variants = {
 export default function ProjectCard({
   title,
   description,
+  stack,
   codeUrl,
   demoUrl,
   image,
@@ -56,19 +58,33 @@ export default function ProjectCard({
         >
           {title}
         </motion.h3>
+
         <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
           {description}
         </p>
 
+        {/* Stack display */}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {stack.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs px-2 py-1 rounded-full border text-muted-foreground"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
         <div className="mt-5 flex gap-3">
-          <motion.div whileTap={{ scale: 0.95 }}>
+          {/* Uncomment if you want to show the code link later */}
+          {/* <motion.div whileTap={{ scale: 0.95 }}>
             <Button asChild size="sm" variant="outline" className="flex items-center gap-1">
               <a href={codeUrl} target="_blank" rel="noopener noreferrer">
                 <Github size={16} />
                 Code
               </a>
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {demoUrl && (
             <motion.div whileTap={{ scale: 0.95 }}>

@@ -20,35 +20,41 @@ export default function Projects() {
   const projectDetails = [
     {
       id: 1,
-      title: "Smart Data Table",
+      title: "Fumigation & Pest Control Website",
       description:
-        "A customizable and accessible React data table with sorting, filtering, and pagination.",
-      codeUrl: "https://github.com/hnry/smart-datatable",
-      demoUrl: "https://smart-datatable-demo.vercel.app",
+        "A marketing-focused website built to boost brand awareness and support ad campaigns for a fumigation company. SEO-optimized and integrated with Google Analytics for data-driven marketing insights.",
+      stack: ["Next.js", "React", "TailwindCSS", "Google Analytics"],
+      codeUrl: "#",
+      demoUrl: "https://econsultantsglobaltiija.netlify.app/",
       image: "/econ.png",
     },
     {
       id: 2,
-      title: "Referral System UI",
+      title: "SUWK LMS",
       description:
-        "A clean, multi-step referral system built with React and TailwindCSS for tracking user referrals.",
-      codeUrl: "https://github.com/hnry/referral-system-ui",
-      demoUrl: "https://referral-ui-demo.vercel.app",
+        "A learning management system designed to make skill acquisition accessible for blue-collar professionals. Features authentication, personalized dashboards, and downloadable course certifications.",
+      stack: ["Next.js", "React", "TailwindCSS", "Zustand", "shadcn/ui"],
+      codeUrl: "#",
+      demoUrl: "https://app.suwkafrica.com/",
       image: "/suwk.png",
     },
     {
       id: 3,
-      title: "Scholarship Application Flow",
+      title: "SUWK Website",
       description:
-        "A responsive multi-step scholarship registration form with OTP verification and API integration.",
-      codeUrl: "https://github.com/hnry/scholarship-form",
-      demoUrl: "https://scholarship-demo.vercel.app",
+        "The main entry point into the SUWK ecosystem — introducing users to its mission of making practical education accessible. Integrates Flutterwave for seamless course purchases and optimized for speed and scalability.",
+      stack: ["Next.js", "React", "TailwindCSS", "shadcn/ui", "Flutterwave API"],
+      codeUrl: "#",
+      demoUrl: "https://www.suwkafrica.com/",
       image: "/suwkWeb.png",
     },
   ];
 
   return (
-    <section id="projects" className="px-6 py-20 bg-gradient-to-b from-background to-muted/30">
+    <section
+      id="projects"
+      className="px-6 py-20 bg-gradient-to-b from-background to-muted/30"
+    >
       <motion.h2
         variants={fadeUp}
         initial="hidden"
