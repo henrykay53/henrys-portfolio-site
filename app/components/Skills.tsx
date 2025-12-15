@@ -5,7 +5,11 @@ import { Code, Sparkles, Wrench, Cpu, Layers, Rocket } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const container: Variants = {
@@ -17,17 +21,20 @@ const container: Variants = {
 };
 
 const skills = [
-  { name: "React", icon: <Code className="w-5 h-5" /> },
-  { name: "TypeScript", icon: <Sparkles className="w-5 h-5" /> },
-  { name: "Next.js", icon: <Rocket className="w-5 h-5" /> },
-  { name: "TailwindCSS", icon: <Layers className="w-5 h-5" /> },
-  { name: "Zustand", icon: <Cpu className="w-5 h-5" /> },
-  { name: "Framer Motion", icon: <Wrench className="w-5 h-5" /> },
+  { name: "React", icon: Code },
+  { name: "TypeScript", icon: Sparkles },
+  { name: "Next.js", icon: Rocket },
+  { name: "TailwindCSS", icon: Layers },
+  { name: "Zustand", icon: Cpu },
+  { name: "Framer Motion", icon: Wrench },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-20 max-w-5xl mx-auto text-center">
+    <section
+      id="skills"
+      className="px-6 py-20 max-w-5xl mx-auto text-center"
+    >
       {/* Header */}
       <motion.h2
         variants={fadeUp}
@@ -45,30 +52,35 @@ export default function Skills() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6"
+        className="grid grid-cols-2 sm:grid-cols-3 gap-6"
       >
-        {skills.map((skill, i) => (
+        {skills.map(({ name, icon: Icon }) => (
           <motion.li
-            key={i}
+            key={name}
             variants={fadeUp}
-            whileHover={{
-              y: -6,
-              scale: 1.05,
-              backgroundColor: "hsl(var(--card))",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
-            }}
-            transition={{ type: "spring", stiffness: 250, damping: 15 }}
-            className="flex flex-col items-center justify-center gap-2 p-5 rounded-xl border bg-card/70 backdrop-blur-md cursor-default transition-all"
+            whileHover={{ y: -6, scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 250, damping: 18 }}
+            className="
+              group
+              flex flex-col items-center justify-center gap-2 p-5
+              rounded-xl border
+              bg-card/70 backdrop-blur-md
+              cursor-default
+              transition-all
+              hover:bg-card
+              hover:shadow-lg
+            "
           >
             <motion.div
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="text-primary"
             >
-              {skill.icon}
+              <Icon className="w-5 h-5" />
             </motion.div>
+
             <span className="font-medium text-sm md:text-base">
-              {skill.name}
+              {name}
             </span>
           </motion.li>
         ))}
@@ -76,3 +88,4 @@ export default function Skills() {
     </section>
   );
 }
+

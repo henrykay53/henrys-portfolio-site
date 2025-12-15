@@ -11,7 +11,7 @@ import {
   X,
   User,
   FolderKanban,
-  BookOpen,
+  // BookOpen,
   Code,
   Mail,
 } from "lucide-react";

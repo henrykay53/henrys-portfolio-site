@@ -36,7 +36,7 @@ export default function Contact() {
           <a href="mailto:henrykay53@gmail.com">Email Me</a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="https://www.linkedin.com/in/henry-kolawole-510ab41b4" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/henry-kolawole" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </Button>
