@@ -25,7 +25,7 @@ export default function Projects() {
         "A marketing-focused website built to boost brand awareness and support ad campaigns for a fumigation company. SEO-optimized and integrated with Google Analytics for data-driven marketing insights.",
       stack: ["Next.js", "React", "TailwindCSS", "Google Analytics"],
       codeUrl: "#",
-      demoUrl: "https://econsultantsglobaltiija.netlify.app/",
+      demoUrl: "https://econsultantsglobaltiija.com.ng/",
       image: "/econ.png",
     },
     {
