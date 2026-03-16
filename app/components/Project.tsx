@@ -38,8 +38,19 @@ export default function Projects() {
       demoUrl: "https://app.suwkafrica.com/",
       image: "/suwk.png",
     },
-    {
+
+     {
       id: 3,
+      title: "Insure9ja",
+      description:
+        "Insure9ja is a web platform that helps users learn about insurance products and apply for them through a simple, guided experience. It combines product education, FAQs, and objection-handling content to address common concerns before starting the application process. Users complete a streamlined multi-step form that collects essential information and sends structured application data directly to the client for internal processing.",
+      stack: [ "Typescript", "React", "TailwindCSS", "shadcn/ui", "FramerMotion"],
+      codeUrl: "#",
+      demoUrl: "https://www.insure9ja.com/",
+      image: "/insure9ja.png",
+    },
+    {
+      id: 4,
       title: "SUWK Website",
       description:
         "The main entry point into the SUWK ecosystem — introducing users to its mission of making practical education accessible. Integrates Flutterwave for seamless course purchases and optimized for speed and scalability.",
@@ -47,7 +58,7 @@ export default function Projects() {
       codeUrl: "#",
       demoUrl: "https://www.suwkafrica.com/",
       image: "/suwkWeb.png",
-    },
+    }
   ];
 
   return (
