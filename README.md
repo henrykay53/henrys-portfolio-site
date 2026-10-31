@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# henrys-portfolio-site
 
-## Getting Started
+Personal portfolio of Henry Kolawole, software engineer. Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4.
 
-First, run the development server:
+Design decisions, content rules and progress live in [docs/SPEC.md](docs/SPEC.md).
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # optional; the site runs without it
+npm run dev                  # http://localhost:3000
+npm run build && npm start   # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path | What |
+|---|---|
+| `content/` | All copy and data: profile, experience, skills, case studies. Edit text here, not in components. |
+| `app/page.tsx` | Home page sections |
+| `app/work/[slug]/` | Case-study pages (statically generated from `content/projects.ts`) |
+| `app/api/contact/route.ts` | Contact form endpoint (validation, honeypot, rate limit, Resend) |
+| `components/` | Shared UI: header, device frames, metrics, contact form |
+| `public/work/` | Project screenshots |
+| `public/henry-kolawole-cv.pdf` | The downloadable CV. Replace this file to update it. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To add a case study, add an entry to `projects` in `content/projects.ts` and its images to `public/work/`.
+The home page, case-study route, sitemap and OG image pick it up automatically.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+See `.env.example`. All are optional for local development.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `NEXT_PUBLIC_SITE_URL` sets canonical URLs, the sitemap and OG image URLs. Set it to the real domain in production.
+- `RESEND_API_KEY` enables the contact form to send email. It is read only on the server.
+  Without it, the form shows a "send from your email app" fallback with the message pre-filled.
+- `CONTACT_TO_EMAIL` and `CONTACT_FROM_EMAIL` set the recipient and sender.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+### Netlify (current host)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push the branch and connect the repo in Netlify (or open the existing site's settings).
+2. Netlify detects Next.js and applies its Next.js runtime automatically. Build command: `npm run build`.
+3. Under **Site configuration → Environment variables**, add `NEXT_PUBLIC_SITE_URL` and, for the form, `RESEND_API_KEY`.
+4. Deploy, then check `/sitemap.xml`, `/robots.txt`, a case-study page, the CV download, and a test message from the form.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (alternative)
+
+Import the repo, add the same environment variables, deploy. No configuration file is needed.
+
+### Contact form email (Resend)
+
+1. Create a free account at resend.com **using the inbox you want messages delivered to**.
+2. Create an API key and set it as `RESEND_API_KEY` in the host's environment variables.
+3. With the default sender `onboarding@resend.dev`, Resend delivers only to the account owner's email.
+   To send from your own domain, verify the domain in Resend and set `CONTACT_FROM_EMAIL`.
