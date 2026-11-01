@@ -89,7 +89,7 @@ export const experience: Role[] = [
 ];
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["TypeScript", "JavaScript", "Dart", "PHP", "HTML", "CSS"] },
+  { group: "Languages", items: ["TypeScript", "JavaScript", "Dart", "PHP", "HTML & CSS"] },
   { group: "Web", items: ["React 19", "Next.js (App Router)", "Tailwind CSS", "shadcn/ui", "Ant Design", "Framer Motion"] },
   { group: "Mobile", items: ["Flutter", "iOS & Android", "Theming", "Tablet layouts", "Google Maps", "Push notifications"] },
   { group: "State & data", items: ["TanStack Query", "Zustand", "React Hook Form", "REST APIs", "Pusher"] },

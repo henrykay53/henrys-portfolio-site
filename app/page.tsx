@@ -195,25 +195,32 @@ function Skills() {
         title="The tools I use in production."
         intro="Grouped by where I use them day to day."
       />
-      <div data-reveal className="grid gap-px overflow-hidden rounded-panel border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-4">
+      <div data-reveal className="flex flex-col border-b border-hairline">
         {skills.map((s) => (
-          <div key={s.group} className="flex flex-col gap-3 bg-bg p-6">
+          <div
+            key={s.group}
+            className="grid gap-3 border-t border-hairline py-5 md:grid-cols-[12rem_1fr] md:items-baseline md:gap-8"
+          >
             <h3 className="eyebrow">{s.group}</h3>
-            <ul className="flex flex-col gap-1.5 text-[15px]">
+            <ul className="flex flex-wrap gap-2 text-[15px]">
               {s.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="rounded-full bg-surface px-3.5 py-1.5">
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
         ))}
-        <div className="flex flex-col justify-end bg-bg p-6">
-          <a href={site.cv} download className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-accent">
-            Full detail in my CV
-            <ArrowDownToLine className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
-            <span className="sr-only">(PDF)</span>
-          </a>
-        </div>
       </div>
+      <a
+        href={site.cv}
+        download
+        className="group mt-6 inline-flex items-center gap-1.5 text-[15px] font-medium text-accent"
+      >
+        Full detail in my CV
+        <ArrowDownToLine className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
+        <span className="sr-only">(PDF)</span>
+      </a>
     </section>
   );
 }
